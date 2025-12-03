@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+:root {
+
+    /* Primary */
+
+--Light-reaction: hsl(0, 100%, 67%);
+--Orangey-memory: hsl(39, 100%, 56%);
+--Green-verbal: hsl(166, 100%, 37%);
+--Cobalt-visual: hsl(234, 85%, 45%);
+
+/* Gradients */
+
+--result-background1: hsl(252, 100%, 67%);
+--result-background2: hsl(241, 81%, 54%);
+
+--background-circle1: hsla(256, 72%, 46%, 1);
+--background-circle2: hsla(241, 72%, 46%, 0);
+
+
+
+/* Neutral */
+
+--White: hsl(0, 0%, 100%);
+--body: hsl(221, 100%, 96%);
+--Light-lavender: hsl(241, 100%, 89%);
+--Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+    background-color: var(--body);
+    min-height: 100vh;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+
+    background-color: var(--White);
+    max-width: 568px;
+    border-radius: 20px;
+}
+
+/* == COLLUMN 1 / RESULTS == */
+
+.results {
+    background: linear-gradient(var(--result-background1), var(--result-background2)); color: var(--White);
+    padding: 2rem;
+    width: 50%;
+    border-radius: 20px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.results h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+
+/* == CIRCLE == */
+
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(var(--background-circle1), var(--background-circle2));
+
+    width: 150px;
+    height: 150px;
+    margin: 1rem auto;
+    border-radius: 50%;
+}
+
+/* == NUMBERS - CIRCLE == */
+
+.big-number {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.small-number {
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+/* == RESULTS DESCRIÇÃO == */
+
+.descricao h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+
+.descricao p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+/* == SUMMARY == */
+
+.summary-itens {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+    width: 50%;
+    padding: 2rem;
+}
+
+.summary-itens h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.skills {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.6rem;
+    border-radius: 10px;
+}
+
+#skill-reaction {
+    background: hsla(0, 100%, 67%, 0.123); color: hsl(0, 100%, 67%);
+}
+#skill-memory {
+    background: hsla(39, 100%, 56%, 0.13); color: hsl(39, 100%, 56%);
+}
+#skill-verbal {
+    background: hsla(166, 100%, 37%, 0.123); color: hsl(166, 100%, 37%);
+}
+#skill-visual {
+    background: hsla(234, 85%, 45%, 0.164); color: hsl(234, 85%, 45%);
+}
+
+button {
+    background: linear-gradient(var(--Dark-gray-blue)); color: var(--White);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 1.3rem;
+    padding: 0.7rem;
+    border-radius: 30px;
+    border: none;
+}
+
+button:hover {
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsl(241, 72%, 46%));
+}
+
