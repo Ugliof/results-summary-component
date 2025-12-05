@@ -55,6 +55,7 @@ body {
     background-color: var(--White);
     max-width: 568px;
     border-radius: 20px;
+    box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.185);
 }
 
 /* == COLLUMN 1 / RESULTS == */
