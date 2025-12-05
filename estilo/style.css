@@ -11,7 +11,7 @@
 
 :root {
 
-    /* Primary */
+/* Primary */
 
 --Light-reaction: hsl(0, 100%, 67%);
 --Orangey-memory: hsl(39, 100%, 56%);
@@ -25,7 +25,6 @@
 
 --background-circle1: hsla(256, 72%, 46%, 1);
 --background-circle2: hsla(241, 72%, 46%, 0);
-
 
 
 /* Neutral */
@@ -44,7 +43,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
+
+/* == CONTAINER ==  */
 
 .container {
     display: flex;
@@ -66,7 +68,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .results h1 {
@@ -92,7 +94,7 @@ body {
     border-radius: 50%;
 }
 
-/* == NUMBERS - CIRCLE == */
+/* == NUMBERS / CIRCLE == */
 
 .big-number {
     font-size: 3rem;
@@ -136,6 +138,8 @@ body {
     opacity: 0.8;
 }
 
+/* == SKILLS SUMMARY == */
+
 .skills {
     display: flex;
     flex-flow: row nowrap;
@@ -147,6 +151,8 @@ body {
     padding: 0.6rem;
     border-radius: 10px;
 }
+
+/* == BACKGROUND / COLORS - SKILLS == */
 
 #skill-reaction {
     background: hsla(0, 100%, 67%, 0.123); color: hsl(0, 100%, 67%);
@@ -161,8 +167,27 @@ body {
     background: hsla(234, 85%, 45%, 0.164); color: hsl(234, 85%, 45%);
 }
 
+/* == PORCENTAGEM / SKILLS == */
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.value {
+    color: rgba(0, 0, 0, 0.74);
+    font-weight: 600;
+}
+
+.number-100 {
+    opacity: 0.6;
+}
+
+/* == BUTTON == */
+
 button {
-    background: linear-gradient(var(--Dark-gray-blue)); color: var(--White);
+    background: var(--Dark-gray-blue); color: var(--White);
     font-size: 1rem;
     font-weight: 500;
     margin-top: 1.3rem;
@@ -171,7 +196,38 @@ button {
     border: none;
 }
 
+/* == HOVER == */
+
 button:hover {
     background: linear-gradient(hsla(256, 72%, 46%, 1), hsl(241, 72%, 46%));
+    cursor: pointer;
 }
 
+/* ==  MEDIA QUERY / MOBILE == */
+
+@media (max-width: 584px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0px;
+    }
+    .results {
+        min-width: 100vw;
+        width: 100%;
+        border-radius: 0px 0px 30px 30px;
+        padding: 3rem 4rem ;
+    }
+
+    .summary-itens {
+        min-width: 95vw;
+        width: 95%;
+    }
+
+    button {
+        width: 90%;
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+}
